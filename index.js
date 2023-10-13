@@ -5,5 +5,7 @@ function wish(){
         alert(wish1);
     }
     let person = document.getElementById("in").value;
+    console.log(person);
     wishing(person);
+    
 }
