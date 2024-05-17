@@ -7,11 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assests/css/bootstrap.min.css">
     <style>
+        .border{
+            border: 2px solid red;
+        }
         .gallery{
             display: flex;
             gap: 0.5rem;
-            height: 300px;
-            width: 95%;
+            height: 250px;
+            width: 100%;
         }
         .gallery > div {
             flex: 1;
@@ -33,13 +36,51 @@
             background-size: cover;
         }
         .gallery > div:hover{
-            flex: 4;
+            flex: 6;
         }
+        .bg{
+            background-color: rgb(59, 172, 238);
+            padding: 10px;
+            margin-top: 5px;
+        }
+        .abt{
+            margin-top: 40px;
+        }
+        
     </style>
 </head>
 <body>
+    <!-- navbar Menu-->
     <div class="container">
-        <div class="row">
+        <div class="row bg">
+            <nav class="navbar navbar-expand-md">
+                <a href="#" class="navbar-brand">Rockstar Creations</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#raki">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="raki">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="om">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Our Creations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--navbar menu ends-->
+
+        <!--pics gallery-->
+        <div class="row mt-3">
             <div class="col">
                 <div class="gallery">
                     <div></div>
@@ -48,8 +89,43 @@
                 </div>
             </div>
         </div>
+        <!--pics gallery ends-->
+
+        <!--about us-->
+        <div class="row mt-5">
+            <div class="col-2 mx-auto abt">
+                <h4>About Us</h4>
+            </div>
+
+        </div>
+        <div class="row mt-4 p-2" id="about">
+            
+            <div class="col-6">
+                <h3>Rakesh</h3>
+                <p>Getting in touch with the website designs and developing them on our own styles is our goal and working ethics</p>
+            </div>
+            <div class="col-6">
+                <h3>Nishalini</h3>
+                <p>Learning the new ways to create more of unique structures and layouts for websites may be enjoyable to the team</p>
+            </div>
+            <div class="col-6 mx-auto mt-3">
+                <h3>Stany Melvin Raj</h3>
+                <p>Learning the new ways to create more of unique structures and layouts for websites may be enjoyable to the team</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                
+            </div>
+        </div>
     </div>
     <script src="./assests/js/jquery.min.js"></script>
     <script src="./assests/js/bootstrap.min.js"></script>
+    <script>
+        var om = document.getElementById("om");
+        om.addEventListener('click', ()=>{
+            location.reload();
+        })
+    </script>
 </body>
 </html>
