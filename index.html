@@ -68,7 +68,35 @@
             border-radius: 50%;
             margin-right: 10px;
         }
+
+        /*earthdesign*/
+        .earth{
+            width: 200px;
+            height: 250px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background: url(./pics/earth.jpg);
+            background-position: center;
+            background-size: cover;
+            animation: roll 5s linear infinite;
+        }
+        @keyframes roll{
+            0%{
+                background-position: 0;
+            }
+            100%{
+                background-position: -480px;
+            }
+        }
         
+        .ehov:hover{
+            cursor: pointer;
+            background: url(./pics/night.jpg);
+        }
+        .earthhoverme{
+            margin-left: 90px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -144,8 +172,11 @@
             </div>
         </div>
         <div class="row main">
-            <div class="col-4 border">
-                <img src="./pics/Chrysanthemum.jp" alt="first project">
+            <div class="col-4 bg-dark text-white ehov">
+                <h4 class="ms-5">Earth creation</h4>
+                <div class="col earth ms-5 mt-5">
+                </div>
+                <h3 class="earthhoverme" onmouseover="earthover()">Hover Me</h3>
             </div>
             <div class="col-4 border">
                 <img src="./pics/Desert.jp" alt="Second project">
@@ -157,7 +188,7 @@
         <!--End of our creations-->
 
         <!-- contact-->
-        <div class="row bg-dark text-white">
+        <div class="row bg-dark text-white mt-4">
             <div class="col-6 p-4" id="contact">
                 <p>Contact - <a href="tel:+91 9902235306">9902235306</a></p>
                 <p>Email-<a href="mailto:rakeshyadhavan03@gmail.com" target="_blank">rakeshyadhavan03@gmail.com</a></p>
@@ -179,6 +210,13 @@
         om.addEventListener('click', ()=>{
             location.reload();
         })
+
+        //earth hover effect
+        
+        function earthhover(){
+            var earth = document.querySelector(".earthhoverme");
+            earth.textContent = "Click";
+        }
     </script>
     <!--icons connection-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
