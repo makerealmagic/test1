@@ -169,14 +169,14 @@
             </div>
         </div>
         <div class="row main">
-            <div class="col bg-dark text-center  text-white ehov">
+            <div class="col bg-dark text-center raki text-white ehov">
                 <h4 class="">Earth creation</h4>
                 <div class="container">
                     <div class="earth ms-auto">
                     </div>
                 </div>
                 
-                <h3 class="earthhoverme" onmouseover="earthover()">Hover Me</h3>
+                <h3 class="earthhoverme">Click Me</h3>
             </div>
             <div class="col border">
                 <img src="./pics/Desert.jp" alt="Second project">
@@ -212,11 +212,14 @@
         })
 
         //earth hover effect
-        
-        function earthhover(){
-            var earth = document.querySelector(".earthhoverme");
-            earth.textContent = "Click";
-        }
+     
+        var earth = document.querySelector('.earthhoverme');
+        var earth1 = document.querySelector('.raki');
+        earth1.addEventListener('click', ()=>{
+            earth.textContent = "Explore";
+            window.location = "https://www.google.com/search?q=google&oq=google&aqs=chrome.0.0i131i355i433i512j46i131i199i433i465i512j0i131i433i512j69i60j69i65l3j69i60.5641j0j7&sourceid=chrome&ie=UTF-8";
+        })
+       
     </script>
     <!--icons connection-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
