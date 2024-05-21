@@ -73,25 +73,62 @@
         .earth{
             width: 200px;
             height: 250px;
-            border: 2px solid black;
             border-radius: 50%;
             background: url(./pics/earth.jpg);
             background-position: center;
             background-size: cover;
-            animation: roll 5s linear infinite;
+            z-index: 1;
+            animation: eroll 5s linear infinite;
+            visibility: visible;
+        }
+        @keyframes eroll{
+            100%{
+                background-position: -640px;
+            }
+        }
+        .moonbase{
+            width: 130px;
+            height: 150px;
+            position: absolute;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-shadow: 1px 1px 1px white, 5px 5px 5px grey, 10px 10px 10px black;
+            overflow: hidden;
+            animation: roll 15s linear infinite;
+        }
+        .moonbase .moon{
+            width: 150px;
+            height: 150px;
+            background: url(./pics/moon1.jpg);
+            background-position: center;
+            background-size: cover;
+            animation: mroll 15s linear infinite;
+        }
+        @keyframes mroll {
+            100%{
+                background-position: -640px;
+            }
         }
         @keyframes roll{
-            0%{
-                background-position: 0;
+            20%{
+                transform: perspective(9000px) translateZ(500px) translateX(-200px);
             }
-            100%{
-                background-position: -480px;
+            34%{
+                z-index: 2;
+            }
+
+            50%{
+                transform: perspective(9000px) translateZ(500px) translateX(200px);
+            }
+            51%{
+                z-index: 0;
             }
         }
-        
-        .ehov:hover{
+        */
+        .ehov{
             cursor: pointer;
             background: url(./pics/night.jpg);
+            z-index: 10;
         }
         
     </style>
@@ -190,12 +227,15 @@
                 <h3 id="ourcreations">Our Creations</h3>  
             </div>
         </div>
-        <div class="row main">
-            <div class="col-sm bg-dark text-center raki text-white ehov">
+        <div class="row main border">
+            <div class="col-sm bg-dark text-center raki text-white overflow-hidden ehov">
                 <h4 class="">Earth creation</h4>
-                <div class="container d-flex justify-content-center align-items-center">
-                    <div class="earth">
+                <div class="container d-flex justify-content-center align-items-center ">
+                        <div class="earth"></div>
+                        <div class="moonbase">
+                        <div class="moon"></div>
                     </div>
+                    
                 </div>
                 
                 <h3 class="earthhoverme">Click Me</h3>
