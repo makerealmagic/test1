@@ -14,15 +14,21 @@
         }
         body{
             width: 100%;
-            min-height: 100vh;
+            min-height: 120vh;
             background: url(../pics/night2.jpg);
-            background-repeat: no-repeat;
+            background-repeat: repeat;
             background-position: center;
             background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            animation: bgmov 20s linear infinite;
+        }
+        @keyframes bgmov{
+            50%{
+                background-position: 10px;
+            }
         }
         .main{
             width: 100%;
