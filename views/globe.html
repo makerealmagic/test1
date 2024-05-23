@@ -22,12 +22,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow-x: hidden;
-            animation: bgmov 20s linear infinite;
+            overflow: hidden;
+            animation: bgmov 120s linear infinite;
         }
         @keyframes bgmov{
             50%{
-                background-position: 10px;
+                background-position: 5px;
             }
         }
         .main{
@@ -37,7 +37,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transform: translateY(-30px);
+            transform: translateY(50px) translateX(20px);
+            overflow: hidden ;
         }
         .sun{
             width: 100px;
