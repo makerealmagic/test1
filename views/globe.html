@@ -16,13 +16,13 @@
             width: 100%;
             min-height: 120vh;
             background: url(../pics/night2.jpg);
-            background-repeat: repeat;
+            background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow-y: hidden;
             animation: bgmov 20s linear infinite;
         }
         @keyframes bgmov{
@@ -32,12 +32,12 @@
         }
         .main{
             width: 100%;
-            height: 100%;
+            height: 100vh;
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            
+            overflow-y: hidden;
         }
         .sun{
             width: 100px;
