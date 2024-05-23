@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assests/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assests/css/bootstrap.min.css">
     <style>
         body{
-            background-color: rgb(220, 241, 245);
+            background-color: rgb(25, 68, 77);
         }
         .border{
             border: 2px solid red;
@@ -24,17 +24,17 @@
             transition: all 1s;
         }
         .gallery > div:nth-child(1){
-            background: url(./pics/Chrysanthemum.jpg);
+            background: url(../pics/Chrysanthemum.jpg);
             background-position: center;
             background-size: cover;
         }
         .gallery > div:nth-child(2){
-            background: url(./pics/Desert.jpg);
+            background: url(../pics/Desert.jpg);
             background-position: center;
             background-size: cover;
         }
         .gallery > div:nth-child(3){
-            background: url(./pics/Hydrangeas.jpg);
+            background: url(../pics/Hydrangeas.jpg);
             background-position: center;
             background-size: cover;
         }
@@ -79,7 +79,7 @@
             height: 250px;
             border-radius: 50%;
             box-shadow: 5px 5px 5px black, 10px 10px 10px black;
-            background: url(./pics/earth.jpg);
+            background: url(../pics/earth.jpg);
             background-position: center;
             background-size: cover;
             z-index: 1;
@@ -103,7 +103,7 @@
         .moonbase .moon{
             width: 150px;
             height: 150px;
-            background: url(./pics/moon1.jpg);
+            background: url(../pics/moon1.jpg);
             background-position: center;
             background-size: cover;
             animation: mroll 15s linear infinite;
@@ -129,10 +129,18 @@
             }
         }
         .ehov{
-            background: url(./pics/night.jpg);
+            background: url(../pics/night.jpg);
         }
         .ehov:hover{
             cursor: pointer;
+        }
+        .abthov{
+            transition: 0.5s;
+        }
+        .abthov:hover{
+            transform: perspective(2000px) translateZ(150px);
+            transition: 0.5s;
+            cursor: pointer;    
         }
         
     </style>
@@ -142,7 +150,7 @@
     <div class="container overflow-hidden">
         <div class="row bg">
             <nav class="navbar navbar-expand-md">
-                <img src="./pics/initial-gold-letter-rc-logo-design-vector-37403587.jpg" alt="RC" id="brand">
+                <img src="../pics/initial-gold-letter-rc-logo-design-vector-37403587.jpg" alt="RC" id="brand">
                 <a href="#" class="navbar-brand">Rockstar Creations</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#raki">
                     <span class="navbar-toggler-icon"></span>
@@ -190,8 +198,8 @@
         <div class="row mt-4 ms-aut0 p-2">
             
             <div class="col-sm ms-4 mt-3">
-                <div class="card text-center" style="width:20rem;">
-                    <img src="./pics/Desert.jpg" alt="raki" class="card-img-top" >
+                <div class="card text-center abthov" onmouseover="raki(event)" style="width:20rem;">
+                    <img src="../pics/Desert.jpg" alt="raki" class="card-img-top" >
                     <div class="card-body">
                         <h3 class="card-title">Rakesh</h3>
                         <p class="card-text">Getting in touch with the website designs and developing them on our own styles is our goal and working ethics</p>    
@@ -200,8 +208,8 @@
                 
             </div>
             <div class="col-sm ms-4 mt-3">
-                <div class="card text-center" style="width:20rem;">
-                    <img src="./pics/Chrysanthemum.jpg" alt="nisha" class="card-img-top">
+                <div class="card text-center abthov" onmouseover="raki(event)" style="width:20rem;">
+                    <img src="../pics/Chrysanthemum.jpg" alt="nisha" class="card-img-top">
                     <div class="card-body">
                         <h3 class="card-title">Nishalini</h3>
                         <p class="card-text">Learning the new ways to create more of unique structures and layouts for websites may be enjoyable to the team</p>
@@ -212,8 +220,8 @@
                 
             </div>
             <div class="col-sm ms-4 mt-3">
-                <div class="card text-center" style="width:20rem;">
-                    <img src="./pics/Hydrangeas.jpg" alt="stany"  class="card-img-top">
+                <div class="card text-center abthov" onmouseover="raki(event)" style="width:20rem;">
+                    <img src="../pics/Hydrangeas.jpg" alt="stany"  class="card-img-top">
                     <div class="card-body">
                         <h3 class="card-title">Stany Melvin Raj</h3>
                         <p class="card-text">Maintaining things in website designs may be difficult but our team does it with a piece of cake</p>
@@ -227,7 +235,7 @@
        
         <!--Our creations-->
         <div class="row">
-            <div class="col-sm ms-auto bg-dark text-white ourcreations">
+            <div class="col-sm ms-auto mt-4 bg-dark text-white ourcreations">
                 <h3 id="ourcreations" class="p-3 fw-bold">Our Creations</h3>  
             </div>
         </div>
@@ -245,14 +253,14 @@
                 <h3 class="earthhoverme mt-4">Click Me</h3>
             </div>
             <div class="col-sm overflow-hidden mt-4" style="height: 400px;">
-                <div class="container gap-3 d-flex justify-content-center align-items-center border">
-                    <img src="./pics/Desert.jpg" alt="Second project">
+                <div class="container gap-3 d-flex justify-content-center align-items-center">
+                    <img src="../pics/Desert.jpg" alt="Second project">
                 </div>
                 
             </div>
             <div class="col-sm overflow-hidden mt-4" style="height: 400px;">
-                <div class="container gap-3 d-flex justify-content-center align-items-center border">
-                    <img src="./pics/Hydrangeas.jpg" alt="third project">   
+                <div class="container gap-3 d-flex justify-content-center align-items-center">
+                    <img src="../pics/Hydrangeas.jpg" alt="third project">   
                 </div>
                  
             </div>
@@ -275,8 +283,8 @@
 
         <!--End of contact-->
     </div>
-    <script src="./assests/js/jquery.min.js"></script>
-    <script src="./assests/js/bootstrap.min.js"></script>
+    <script src="../assests/js/jquery.min.js"></script>
+    <script src="../assests/js/bootstrap.min.js"></script>
     <script>
         var om = document.getElementById("om");
         om.addEventListener('click', ()=>{
@@ -291,7 +299,8 @@
             earth.textContent = "Explore";
             window.location = "https://www.google.com/search?q=google&oq=google&aqs=chrome.0.0i131i355i433i512j46i131i199i433i465i512j0i131i433i512j69i60j69i65l3j69i60.5641j0j7&sourceid=chrome&ie=UTF-8";
         })
-       
+        
+        
     </script>
     <!--icons connection-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
